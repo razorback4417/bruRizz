@@ -1,4 +1,4 @@
-# [bruRizz](https://www.google.com) gives you the best rizz.
+# [bruRizz](https://www.google.com)
 
 To run, clone the repo and go to [OpenAI](https://beta.openai.com/account/api-keys). Make an account and put your API key in the `.env` file.
 
