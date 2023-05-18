@@ -11,7 +11,7 @@ import LoadingDots from "../components/LoadingDots";
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [question, setAnswer] = useState("");
-  const [student, setStudent] = useState<StudentType>("Incoming");
+  const [student, setStudent] = useState<StudentType>("Passive");
   const [generatedAnswers, setGeneratedAnswers] = useState<String>("");
 
   const questionRef = useRef<null | HTMLDivElement>(null);
@@ -22,14 +22,29 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `Generate a factually correct answer for a ${student} student at UCLA. First, research information from the official UCLA site. Then try to find relavent information from students on social media. Finally, answer precisely and clearly labeled answers as "1." and "2.". ${
-    student === "Transfer"
-      ? "Make sure the answers are relavent for a transfering UCLA student. Include some specific information about transfer students."
+  const prompt = `You are 'bruRizz GPT,' an AI that comes up with the best rizz for students at UCLA. \
+    Your task is to come up with the best rizz response for a ${student} student at UCLA. \
+    A 'passive' student would be polite and shy. An 'alpha' student would be overconfident and forceful. \
+    A 'cringy' student would use very cringy pickup lines that sound like a elementary school student. \
+
+    Here are the steps to come up with the best rizz for the student at UCLA:
+    Step 1: Research what rizz means in modern terms. Have a library of pickup lines that a ${student} would use.
+    Step 2: Come up with puns related to UCLA that could possibly fit into the pickup line. This part is not mandatory. It is up to you to decide.
+    Step 3: Finally, provide the answer based on the information you found in the previous steps and label each pickup line as as "1." and "2.".
+    ${student === "Passive"
+      ? "Make sure the answers are relavent for a shy and subtle UCLA student."
       : null
-  }
-      Make sure each generated answer is less than 160 characters, has factual information found from UCLA sites. ${question}${
-    question.slice(-1) === "." ? "" : "."
-  }`;
+    }
+    ${student === "Alpha"
+      ? "Make sure the answers are relavent for a dominant and confident UCLA student. This could relate to sports, fighting, or ultimate rizz."
+      : null
+    }
+    ${student === "Cringy"
+      ? "Remember to make sure the answers are cringe."
+      : null
+    }
+      Make sure each generated answer is less than 200 characters. ${question}${question.slice(-1) === "." ? "" : "."
+    }`;
 
   const generateAnswer = async (e: any) => {
     e.preventDefault();
@@ -72,16 +87,16 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>bruinBot</title>
+        <title>bruRizz</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          Answer all your questions about UCLA
+          Be the best verizzion of yourself at UCLA
         </h1>
-        <p className="text-slate-500 mt-5"> 14 questions answered so far.</p>
+        <p className="text-slate-500 mt-5"> 3 brurizz used so far. Click on the responses to copy to clipboard.</p>
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
             <Image
@@ -92,9 +107,9 @@ const Home: NextPage = () => {
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              Ask a question about UCLA{" "}
+              Ask how to rizz at UCLA{" "}
               <span className="text-slate-500">
-                (or anything about college in general)
+                (or anything about rizz in general)
               </span>
               .
             </p>
@@ -105,7 +120,7 @@ const Home: NextPage = () => {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "e.g. What are the best dining halls for dinner at UCLA?"
+              "e.g. What is the best pickup line for a guy to use at UCLA at 6pm?"
             }
           />
           <div className="flex mb-5 items-center space-x-3">
@@ -121,7 +136,7 @@ const Home: NextPage = () => {
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               onClick={(e) => generateAnswer(e)}
             >
-              Ask your question &rarr;
+              Rizz me up &rarr;
             </button>
           )}
           {loading && (
@@ -147,7 +162,7 @@ const Home: NextPage = () => {
                   className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
                   ref={questionRef}
                 >
-                  bruinBot Answer:
+                  bruRizz Advice:
                 </h2>
               </div>
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">

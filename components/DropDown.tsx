@@ -10,14 +10,14 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export type StudentType = "Incoming" | "Transfer" | "Current";
+export type StudentType = "Passive" | "Alpha" | "Cringy";
 
 interface DropDownProps {
   student: StudentType;
   setStudent: (student: StudentType) => void;
 }
 
-let students: StudentType[] = ["Incoming", "Transfer", "Current"];
+let students: StudentType[] = ["Passive", "Alpha", "Cringy"];
 
 export default function DropDown({ student, setStudent }: DropDownProps) {
   return (
