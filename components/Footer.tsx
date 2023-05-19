@@ -20,12 +20,12 @@ export default function Footer() {
           rel="noreferrer"
           className="font-bold hover:underline transition underline-offset-2"
         >
-          Vercel Edge Functions.
+          Rizz.
         </a>
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
         <Link
-          href="https://www.instagram.com/ucla/"
+          href="https://www.instagram.com/theo.luu13/"
           className="group"
           aria-label="Instagram"
         >
@@ -34,7 +34,7 @@ export default function Footer() {
           </svg>
         </Link>
         <Link
-          href="https://github.com/razorback4417/bruinBot"
+          href="https://github.com/razorback4417/bruRizz"
           className="group"
           aria-label="GitHub"
         >

@@ -26,11 +26,9 @@ const Home: NextPage = () => {
     Your task is to come up with the best rizz response for a ${student} student at UCLA. \
     A 'passive' student would be polite and shy. An 'alpha' student would be overconfident and forceful. \
     A 'cringy' student would use very cringy pickup lines that sound like a elementary school student. \
+    Rizz means flirting or making advances towards someone. \
 
-    Here are the steps to come up with the best rizz for the student at UCLA:
-    Step 1: Research what rizz means in modern terms. Have a library of pickup lines that a ${student} would use.
-    Step 2: Come up with puns related to UCLA that could possibly fit into the pickup line. This part is not mandatory. It is up to you to decide.
-    Step 3: Finally, provide the answer based on the information you found in the previous steps and label each pickup line as as "1." and "2.".
+    For your final answer, only provide 2 UCLA related pickup lines labled as "1" and "2". You do not need to write out the answer for each step.
     ${student === "Passive"
       ? "Make sure the answers are relavent for a shy and subtle UCLA student."
       : null
@@ -40,7 +38,7 @@ const Home: NextPage = () => {
       : null
     }
     ${student === "Cringy"
-      ? "Remember to make sure the answers are cringe."
+      ? "Remember to make sure the answers are cringe and related to UCLA."
       : null
     }
       Make sure each generated answer is less than 200 characters. ${question}${question.slice(-1) === "." ? "" : "."
