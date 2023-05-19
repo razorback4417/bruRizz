@@ -1,5 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 
+//default Doc
 class MyDocument extends Document {
   render() {
     return (
