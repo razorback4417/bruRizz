@@ -11,4 +11,5 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
+//export for reference
 export default MyApp;

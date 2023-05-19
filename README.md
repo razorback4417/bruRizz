@@ -1,4 +1,4 @@
-# [bruRizz](https://www.google.com)
+# [bruRizz](https://bru-rizz.vercel.app/)
 
 To run, clone the repo and go to [OpenAI](https://beta.openai.com/account/api-keys). Make an account and put your API key in the `.env` file.
 

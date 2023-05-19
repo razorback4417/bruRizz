@@ -12,7 +12,6 @@ module.exports = {
     extend: {
       colors: {
         'ucla-blue': '#2774ae',
-
       },
     },
   },
